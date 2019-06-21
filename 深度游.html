@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/loaders.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/loading.css"/>
+		<link rel="stylesheet" type="text/css" href="css/头部.css"/>
+		<link rel="stylesheet" type="text/css" href="css/底部.css"/>
+		<link rel="stylesheet" type="text/css" href="css/深度游.css"/>
+		<link rel="stylesheet" type="text/css" href="css/深度游media.css"/>
+		<link rel="icon" type="text/css" href="img/logo.ico">
+		
+		<!-- <link rel="stylesheet" href="css/reset.css"> --> <!-- CSS reset -->
+		<link rel="stylesheet" href="css/style.css">
+		
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.carousel.js"></script>
+		<script src="bootstrap/js/bootstrap.js"></script>
+		
+		<script src="js/main.js"></script>
+		
+		<title>深度游</title>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.loading').addClass('.loader-chanage')
+				$('.loading').fadeOut(300)
+			})
+		</script>
+	</head>
+	<!--loading页开始-->
+	<div class="loading">
+		<div class="loader">
+			<div class="loader-inner pacman">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+	<!--loading页结束-->
+	<body>
+		<!--导航-->
+		<header class="navbar-fixed-top navs">
+			<a href="首页.html"><img src="img/logo.png"></a>
+			<span id="cloud"></span>
+			<ul id="navBar">
+				<li><a href="首页.html" data-lang = "index">首页</a></li>
+				<li><a href="一级美食行.html" data-lang = "cuisines">美食行</a></li>
+				<li><a href="自由行.html" data-lang = "free">自由行</a></li>
+				<li><a href="高端定制一.html" data-lang = "need">高端定制</a></li>
+				<li><a href="深度游.html" data-lang = "depth">深度游</a></li>
+				<li><a href="当地拼团.html" data-lang = "local">当地拼团</a></li>
+				<li><a href="攻略.html" data-lang = "stragety">攻略</a></li>
+			</ul>
+			<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/style.js" type="text/javascript" charset="utf-8"></script>
+			<p data-toggle = "modal" data-target = "#myModal"><img src="img/sou.png"/>注册/登录</p>
+			<div class="modal fade" id="myModal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+								<button class="close"data-dismiss="modal">&times;</button>
+								<h4>用户登录</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<i class="glyphicon glyphicon-user">账户</i>
+									<input type="text"placeholder="请输入用户名"/>
+								</div>
+								<div class="form-group">
+									<i class="glyphicon glyphicon-lock">密码</i>
+									<input type="password"placeholder="请输入密码"/>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-primary"data-dismiss="modal">登录</button>
+							<button class="btn btn-primary"data-dismiss="modal">去注册</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--轮播-->
+		<div class="carousel slide" id="myCar" data-ride = "carousel">
+			<!--圆点信息-->
+			<ol class="carousel-indicators">
+				<li class="active" data-slide-to = "0" data-target = "#myCar"></li>
+				<li data-slide-to = "1" data-target = "#myCar"></li>
+			</ol>
+			<!--轮播项目-->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="img/banner4.png"/>
+				</div>
+				<div class="item">
+					<img src="img/banner4.1.jpg"/>
+				</div>
+			</div>
+		</div>
+		<!--内容-->
+		<!--深度游-->
+		<div class="bigContent cd-image-mask-effect">
+			<div class="content container">
+				<h1>深<span>度</span>游</h1>
+				<h5>SHEN YOU CHINA ESAT WITHELEN CLFFA <br> OFF <d>FUPLEATDGGE</d> GO</h5>
+				<div class="list project-1 cd-project-mask">
+					<img src="img/shen1.png">
+					<h3 class="project-trigger">国内景点深度游</h3>
+					<p>这些未被商业化侵蚀的隐式旅行地  它们依旧<br>保持着清新淡雅  静谧安宁 感受<br>原始的美丽</p>
+					<div class="featured-image"></div>
+					<div class="mask">
+						<img src="img/shen1.png">
+						<span class="mask-border mask-border-top"></span>
+						<span class="mask-border mask-border-bottom"></span>
+						<span class="mask-border mask-border-left"></span>
+						<span class="mask-border mask-border-right"></span>
+					</div>
+					<a href="#0" class="cd-scroll cd-img-replace">Scroll down</a>
+					<div class="cd-project-info" data-url="project-1">
+						<!-- content loaded using js -->
+					</div>
+					<a href="#0" class="project-close cd-img-replace">Close Project</a>
+				</div>
+				<div class="list project-2 cd-project-mask">
+					<img src="img/shen2.png"/>
+					<h3 class="project-trigger">国外景点深度游</h3>
+					<p>这些地方也许没有健全的旅游设施  也没有<br>鳞次栉比的商家  但却有着世外桃源般<br>的淳朴和宁静</p>
+					<div class="featured-image"></div>
+					<div class="mask masks">
+						<img src="img/shen2.png">
+						<span class="mask-border-one mask-border-top"></span>
+						<span class="mask-border-one mask-border-bottom"></span>
+						<span class="mask-border-one mask-border-left"></span>
+						<span class="mask-border-one mask-border-right"></span>
+					</div>
+					<a href="#0" class="cd-scroll cd-img-replace">Scroll down</a>
+					<div class="cd-project-info" data-url="project-2">
+						<!-- content loaded using js -->
+					</div>
+					<a href="#0" class="project-close cd-img-replace">Close Project</a>
+				</div>
+				<div class="list project-3 cd-project-mask">
+					<img src="img/shen3.png"/>
+					<h3 class="project-trigger">港澳台深度游</h3>
+					<p>这些未被商业化侵蚀的隐式旅行地  它们依旧<br>保持着清新淡雅  静谧安宁 感受<br>原始的美丽</p>
+					<div class="featured-image"></div>
+					<div class="mask">
+						<img src="img/shen3.png">
+						<span class="mask-border-two mask-border-top"></span>
+						<span class="mask-border-two mask-border-bottom"></span>
+						<span class="mask-border-two mask-border-left"></span>
+						<span class="mask-border-two mask-border-right"></span>
+					</div>
+					<a href="#0" class="cd-scroll cd-img-replace">Scroll down</a>
+					<div class="cd-project-info" data-url="project-3">
+						<!-- content loaded using js -->
+					</div>
+					<a href="#0" class="project-close cd-img-replace">Close Project</a>
+				</div>
+			</div>
+		</div>
+		<!--内容轮播-->
+		<div class = "caroursel poster-main hidden-sm hidden-xs col-lg-6" data-setting = '{
+			  "width":800,
+			  "height":470,
+			  "posterWidth":540,
+			  "posterHeight":470,
+			  "scale":0.8,
+			  "dealy":"3000",
+			  "algin":"middle"
+			}'>
+			<ul class = "poster-list">
+				<li class = "poster-item"><img src="img/China1.png" width = "120%" height="90%"></li>
+				<li class = "poster-item"><img src="img/China2.jpg" width = "120%" height="90%"></li>
+				<li class = "poster-item"><img src="img/China3.jpg" width = "120%" height="90%"></li>
+				<li class = "poster-item"><img src="img/China4.jpg" width = "120%" height="90%"></li>
+				<li class = "poster-item"><img src="img/China5.jpg" width = "120%" height="90%"></li>
+			</ul>
+			<div class = "poster-btn poster-prev-btn"></div>
+			<div class = "poster-btn poster-next-btn"></div>
+		</div>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script src="js/jquery.carousel.js"></script>
+		<script>
+			Caroursel.init($('.caroursel'))
+		</script>
+		<!--图片-->
+		<div class="img">
+			<img src="img/tree.png"/>
+		</div>
+		<!--攻略-->
+		<div class="stategy">
+			<span>攻略搜索：</span>
+			<input type="text" placeholder="马尔代夫">
+			<i><img src="img/sou.png"/></i>
+		</div>
+		<!--游记-->
+		<div class="bigTour">
+			<div class="tour">
+				<div class="ul hidden-sm hidden-xs">
+					<div class="li">
+						<img src="img/tour1.jpg"/>
+						<div class="one">
+							<h1>喀山</h1>
+							<h5>童话般的老城街</h5>
+							<span>进入</span>
+						</div>
+						<div class="bigOne">
+							<img src="img/bei.png"/>
+						</div>
+						<div class="two">
+							<h1>查看游记</h1>
+							<h4>俄罗斯喀山：童话般的老城街</h4>
+						</div>
+					</div>
+					<div class="li">
+						<img src="img/tour2.jpg"/>
+						<div class="one">
+							<h1>多米尔</h1>
+							<h5>原始生态沸腾湖</h5>
+							<span>进入</span>
+						</div>
+						<div class="bigOne three">
+							<img src="img/bei.png"/>
+						</div>
+						<div class="two">
+							<h1>查看游记</h1>
+							<h4></h4>多米尔：原始生态沸腾湖</5>
+						</div>
+					</div>
+					<div class="li">
+						<img src="img/tour3.jpg"/>
+						<div class="one">
+							<h1>惠比特</h1>
+							<h5>吸血鬼德古拉诞生地独特小镇</h5>
+							<span>进入</span>
+						</div>
+						<div class="bigOne three">
+							<img src="img/bei.png"/>
+						</div>
+						<div class="two">
+							<h1>查看游记</h1>
+							<h4>惠比特：吸血鬼德古拉诞生地独特小镇</5>
+						</div>
+					</div>
+					<div class="li">
+						<img src="img/tour4.jpg"/>
+						<div class="one">
+							<h1>冰岛</h1>
+							<h5>冰岛雷克雅未克环境</h5>
+							<span>进入</span>
+						</div>
+						<div class="bigOne">
+							<img src="img/bei.png"/>
+						</div>
+						<div class="two">
+							<h1>查看游记</h1>
+							<h4>冰岛：雷克雅未克环境</h4>
+						</div>
+					</div>
+					<div class="li">
+						<img src="img/tour5.jpg"/>
+						<div class="one">
+							<h1>土耳其</h1>
+							<h5>土耳其博德鲁姆地中海度假风</h5>
+							<span>进入</span>
+						</div>
+						<div class="bigOne three">
+							<img src="img/bei.png"/>
+						</div>
+						<div class="two">
+							<h1>查看游记</h1>
+							<h4>土耳其：博德鲁姆地中海度假风</h4>
+						</div>
+					</div>
+					<div class="li">
+						<img src="img/tour6.png"/>
+						<div class="one">
+							<h1>帛琉</h1>
+							<h5>帛琉 水母湖 浮潜大堂</h5>
+							<span>进入</span>
+						</div>
+						<div class="bigOne">
+							<img src="img/bei.png"/>
+						</div>
+						<div class="two">
+							<h1>查看游记</h1>
+							<h4>帛琉:水母湖 浮潜大堂</h4>
+						</div>
+					</div>
+				</div>
+				<div class="tours">
+					<ul class="hidden-lg hidden-md">
+						<li><img src="img/tour1.jpg"/></li>
+						<li><img src="img/tour2.jpg"/></li>
+						<li><img src="img/tour3.jpg"/></li>
+						<li><img src="img/tour4.jpg"/></li>
+						<li><img src="img/tour5.jpg"/></li>
+						<li><img src="img/tour6.png"/></li>
+					</ul>
+					<div>
+						<img src=""/>
+					</div>
+					<script type="text/javascript">
+					$(function(){
+						$('.tours li img').mouseover(function(){
+							$('.tours div img').attr('src',this.src)
+							$('.tours div').show()
+						})
+						$('.tours li img').mousemove(function(e){
+							$('.tours div').css({'top':e.pageY+10,'left':e.pageX+10})
+						})
+						$('.tours li img').mouseout(function(){
+							$('.tours div').hide()
+						})
+					})
+				</script>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<footer>
+			<div class="leads">
+				<h4>中国领先的美食旅行服务平台</h4>
+				<ul>
+					<li>覆盖全球200多个国家和地区</li>
+					<li><span>100,000,000</span>位旅行者</li>
+					<li><span>920,000</span>家国际酒店</li>
+					<li><span>21,000,000</span>条真实点评</li>
+					<li><span>302,000,000</span>次攻略下载</li>
+					<li><span>中国旅游业第一部美食主题旅行</span></li>
+				</ul>
+			</div>
+			<div class="our">
+				<h4>关于我们</h4>
+				<ul>
+					<li>关于味蕾行</li>
+					<li>网络信息侵权通知指引</li>
+					<li>隐私政策 服务协议</li>
+					<li>联系我们</li>
+					<li>网站地图</li>
+					<li><span>加入味蕾行</span></li>
+				</ul>
+			</div>
+			<div class="serve">
+				<h4>旅行服务</h4>
+				<ul>
+					<li>旅游攻略</li>
+					<li>旅游特价</li>
+					<li>旅游问答</li>
+					<li>旅游指南</li>
+					<li>旅游资讯</li>
+					<li><span>全球供应商入驻</span></li>
+				</ul>
+			</div>
+			<div class="watch">
+				<h4>微信公众号</h4>
+				<img src="img/watch.jpg"/>
+			</div>
+			<div class="watch">
+				<h4>官方小程序</h4>
+				<img src="img/watch.jpg"/>
+			</div>
+			<div class="watch app">
+				<h4>APP下载</h4>
+				<img src="img/watch.jpg"/>
+			</div>
+		</footer>
+		<div class="foot">
+			<p>Copyright 2017 bastone.com All Rights Reserved　版权所有·味蕾行　鄂ICP备00000000号-1</p>
+			<p>营业执照 新出网证（京）字242号 全国统一客服电话：<span>022-4562-246</span></p>
+			<img src="img/foot2.png"/>
+		</div>
+	</body>
+</html>
