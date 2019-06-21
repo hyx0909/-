@@ -1,0 +1,351 @@
+/* 云 */
+#navBar
+{
+	position: relative;
+}
+.navs span 
+{
+	position: absolute;
+	top: 5px;
+	left: 460px;
+	width: 83px;
+	height: 42px;
+	background: url(../img/cloud.png) no-repeat;
+}
+/*内容*/
+.content
+{
+	margin-top: 7%;
+}
+/*上部*/
+.top .left
+{
+	float: left;
+	width: 49%;
+	position: relative;
+}
+.top .left img
+{
+	width: 100%;
+}
+.top>.left>ul>li
+{
+	display: inline-block;
+	margin: 25px 5px 0 0;
+}
+.top .left ul li img
+{
+	width: 100px;
+}
+.top .left .last
+{
+	position: absolute;
+	top: -20px;
+	left: 0;
+}
+/*放大镜*/
+.wrap
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.main,.box
+{
+	width: 100%;
+	height: 100%;
+}
+.main img
+{
+	width: 100%;
+	height: 100%;
+}
+.box
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	margin-left: 10px;
+	overflow: hidden;
+}
+.bigBox
+{
+	position: absolute;
+	width: 200%;
+	height: 200%;
+}
+.bigBox img
+{
+	width: 100%;
+	height: 100%;
+}
+.hover
+{
+	display: none;
+	width: 35%;
+	height: 50%;
+	background-color: skyblue;
+	position: absolute;/*父相re子绝ab*/
+	top: 0;
+	left: 0;
+	opacity: .3;/*透明度0-1*/
+}
+.main:hover .hover
+{
+	display: block;
+}
+.wrap:hover .box
+{
+	display: block;
+}
+/*上部-右边*/
+.top .right
+{
+	float: right;
+	width: 49%;
+}
+.top .right .price
+{
+	background-color: white;
+	font-size: 20px;
+	padding: 10px;
+}
+.top .right .price b
+{
+	font-size: 23px;
+	color: #07D79D;
+	margin: 5px;
+}
+.top .right ul
+{
+	margin: 20px 0;
+}
+.top .right ul li
+{
+	line-height: 2.5em;
+}
+.top .right ul li:nth-child(4)
+{
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid black;
+}
+/*选择*/
+.choose
+{
+	margin: 10% 0;
+}
+.choose input
+{
+	height: 25px;
+	background-color: transparent;
+	border: 1px solid #ccc;
+	margin-left: 5%;
+}
+.choose .number input
+{
+	margin: 0;
+	width: 25px;
+}
+.choose .number button
+{
+	width: 25px;
+	height: 25px;
+	background-color: rgba(0,204,255,.4);
+	border: none;
+	color: white;
+}
+.choose .number button:first-child
+{
+	margin-left: 5%;
+}
+.choose>h3>b
+{
+	color: orange;
+	margin-left: 5px;
+}
+.choose a
+{
+	padding: 10px 20px;
+	color: white;
+	font-size: 20px;
+	margin-top: 10%;
+}
+.choose .add
+{
+	background-color: #ec7e49;
+}
+.choose .hope
+{
+	background-color: #07d79d;
+}
+a:hover
+{
+	text-decoration: none;
+}
+/*标签页*/
+.plane img
+{
+	width: 85%;
+	margin-bottom: 20px;
+}
+.plane h3
+{
+	margin: 15px 0;
+}
+.plane h3 span
+{
+	color: #07D79D;
+}
+.bottom .nav-tabs
+{
+	border-bottom: 2px solid #07D79D;
+}
+.nav-tabs li
+{
+	font-size: 20px;
+}
+.nav-tabs li a
+{
+	color: black;
+}
+.nav-tabs li a:hover
+{
+	background-color: transparent;
+	border-bottom: 2px solid orangered;
+}
+.food p
+{
+	text-indent: 2em;
+	line-height: 2em;
+	margin-left: 34px;
+}
+.food img
+{
+	margin: 25px 34px;
+}
+.buy
+{
+	margin: 20px 0;
+}
+.buy span
+{
+	font-size: 26px;
+	margin-right: 15px;
+}
+/*返回首页*/
+.back
+{
+	writing-mode: vertical-lr;
+	background-color: #07D79D;
+	position: absolute;
+	left: 0;
+	top: 80%;
+	padding: 10px 3px;
+	display: none;
+}
+.back a
+{
+	color: white;
+}
+/*购物车*/
+.m-sidebar
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	background:rgba(0,0,0,.5);
+	z-index: 2000;
+	width: 35px;
+	height: 100%;
+	font-size: 12px;
+	color: #fff;
+}
+#msg
+{
+	position:fixed;
+	top:300px;
+	right:35px;
+	z-index:10000;
+	width:1px;
+	height:52px;
+	line-height:52px;
+	font-size:20px;
+	text-align:center;
+	color:#fff;
+	background:#360;
+	display:none;
+}
+.cart
+{
+	color: #fff;
+	text-align:center;
+	line-height: 20px;
+	padding: 200px 0 0 0px;
+}
+.cart b
+{
+	display:block;
+	width:20px;
+	margin:0 auto;
+}
+.cart i
+{
+	width:35px;
+	height:35px;
+	display:block;
+	background:url(../img/car.png) no-repeat;
+}
+/*日历*/
+.big
+{
+	width: 500px;
+	height: 210px;
+	margin: 30px auto;
+}
+.head
+{
+	display: flex;
+	justify-content: space-between;
+	padding: 7px 0;
+}
+.head .prev,
+.head .next
+{
+	cursor: pointer;
+}
+.banner
+{
+	background: #f9f9f9;
+	padding: 10px 0;
+}
+.banner ul
+{
+	margin: 0;
+}
+.banner ul li
+{
+	display: inline-block;
+	padding: 0 22px;
+}
+.foots
+{	
+	border-top: none;
+	padding: 25px 22px;
+}
+.foots ul
+{
+	margin: 0;
+}
+.foots ul li
+{
+	display: inline-block;
+	width: 65px;
+}
+.foots ul li:hover
+{
+	background-color: #07D79D;
+	text-align: center;
+	color: white;
+}

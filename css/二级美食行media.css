@@ -1,0 +1,34 @@
+@media only screen and (max-width: 990px) {
+	header ul
+	{
+		display: none;
+	}
+	.bigBanner
+	{
+		height: 274px;
+	}
+	.yue .right img
+	{
+		width: 120%;
+		height: 296px;
+	}
+	footer,
+	.foot
+	{
+		padding: 3% 5% 0 5%;
+	}
+	footer .our,
+	footer .serve,
+	footer .app
+	{
+		display: none;
+	}
+	.loading
+	{
+		display: none;
+	}
+	#cloud
+	{
+		display: none;
+	}
+}

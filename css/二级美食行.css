@@ -1,0 +1,130 @@
+/* 云 */
+#navBar
+{
+	position: relative;
+}
+.navs span 
+{
+	position: absolute;
+	top: 5px;
+	left: 460px;
+	width: 83px;
+	height: 42px;
+	background: url(../img/cloud.png) no-repeat;
+}
+/*banner*/
+.bigBanner
+{
+	background: url(../img/banner2.jpg) no-repeat;
+	background-size: 100%;
+	z-index: 5;
+	width: 100%;
+	height: 450px;
+	color: white;
+	position: relative;
+	margin-top: 49px;
+}
+.bigBanner h1
+{
+	margin: 0;
+	position: absolute;
+	right: 20%;
+	top: 40%;
+	font-size: 70px;
+	border: 2px solid white;
+}
+.banner
+{
+	position: absolute;
+	right: 10%;
+	top: 5%;
+}
+.banner a
+{
+	background-color: #07D79D;
+	padding: 4px;
+	color: white;
+	border-radius: 2px;
+}
+.banner label
+{
+	margin-right: 8px;
+}
+.banner span
+{
+	transform: rotate(90deg);
+}
+.banner input
+{
+	border-radius: 5px;
+	border: none;
+	color: #07D79D;
+}
+/*导航*/
+.yue
+{
+	width: 75%;
+	margin: 0 auto;
+	z-index: 10 !important;
+	height: 318px;
+}
+.yue .left
+{
+	float: left;
+	width: 55%;
+	height: auto;
+	background-color: #e9a540;
+	color: white;
+	padding: 5% 8% 5% 8%;
+}
+.yue .left h3 span
+{
+	font-size:35px;
+}
+.yue .left p
+{
+	padding-top:20px;
+}
+.yue .right
+{
+	float: right;
+	width: 45%;
+	height: auto;
+}
+.yue .right img
+{
+	width: 100%;
+	height: 292px;
+}
+/*内容*/
+.content
+{
+	text-align: center;
+}
+.content h2 span
+{
+	color: #07D79D;
+}
+.content .img ul li
+{
+	display: inline-block;
+	position: relative;
+	width: 20%;
+}
+.content .img ul li span
+{
+	position: absolute;
+	bottom: 7px;
+	left: 15px;
+	color: white;
+	display: none;
+}
+.content .img ul li:hover span
+{
+	display: block;
+}
+.content .img ul li img
+{
+	width: 100%;
+	margin: 10px;
+}

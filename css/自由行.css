@@ -1,0 +1,338 @@
+/* 云 */
+#navBar
+{
+	position: relative;
+}
+.navs span 
+{
+	position: absolute;
+	top: 5px;
+	left: 585px;
+	width: 83px;
+	height: 42px;
+	background: url(../img/cloud.png) no-repeat;
+}
+/*头部*/
+header
+{
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	padding: 0 10%;
+	background-color: rgba(243,243,246,.8);
+}
+header img
+{
+	height: 40px;
+	margin-top: 5px;
+}
+header p
+{
+	line-height: 50px;
+}
+header p img
+{
+	width: 20px;
+	height: 15px;
+	padding-right: 5px;
+	margin-top: 0;
+}
+header ul li
+{
+	display: inline-block;
+}
+header ul li a
+{
+	color: #000000;
+	padding: 16px 40px;
+	line-height: 50px;
+}
+header ul li a:hover
+{
+	color: white;
+}
+/*banner*/
+.banner
+{
+	background: url(../img/banner3.jpg) no-repeat;
+	background-size: 100%;
+	height: 50%;
+	margin-top: 50px;
+	overflow: hidden;
+}
+.banner ul
+{
+	background-color: rgba(0,0,0,.4);
+	width: 30%;
+	height:auto;
+	padding:3% 0 0 25%;
+	margin: 0;
+}
+.banner ul li
+{
+	padding: 10px 0;
+}
+.banner ul li a
+{
+	color: white;
+	line-height:1em;
+	font-size: 18px
+}
+.banner ul li a:hover
+{
+	color: #07D79D;
+}
+.banner span
+{
+	width: 15px;
+	height: 15px;
+	background-color: #07D79D;
+	border: 2px solid white;
+	border-radius: 50%;
+	position:absolute;
+	top: 25%;
+	left: 29.5%;
+}
+.smallBanner img
+{
+	width: 100%;
+	margin-top: 50px;
+}
+.want
+{
+	background-color: rgba(0,0,0,.4);
+	position: absolute;
+	top: 25%;
+	left: 32%;
+	padding:10px 20px;
+	border-radius:5px;
+}
+.want input[type="button"]
+{
+	width: 80px;
+	margin-bottom: 2px;
+	background-color: white;
+}
+.want input[type="button"]:last-child
+{
+	background-color: #07D79D;
+	color: white;
+}
+.want input[type="text"]
+{
+	width: 240px;
+	padding: 5px 8px;
+	border-radius:5px;
+	border: none;
+}
+.want select
+{
+	width: 116px;
+	padding: 5px 8px;
+	border-radius:5px;
+	border: none;
+}
+
+/*首页*/
+.bigFree
+{
+	background-color: white;
+}
+.free ul
+{
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+}
+.free ul li
+{
+	display: inline-block;
+	padding: 15px 20px;
+}
+.free ul li:first-child
+{
+	color: #07D79D;
+}
+.free ul li:hover
+{
+	color: #07D79D;
+}
+/*秒杀抢购*/
+.pay
+{
+	overflow: hidden;
+}
+.pay h3 span img
+{
+	width:40px;
+	margin-right: 5px;
+}
+/*list*/
+.list
+{
+	width: 31%;
+	overflow: hidden;
+	background-color: white;
+	float: left;
+	margin: 5px;
+}
+.list img
+{
+	width: 97%;
+	margin: 5px;
+}
+.word
+{
+	padding: 0 15px 15px 15px;
+}
+.list a
+{
+	float: right;
+	background-color: #07D79D;
+	padding: 2px 5px;
+	color: white;
+}
+.list small
+{
+	color: #ccc;
+}
+.list .word b
+{
+	font-weight: normal;
+	font-size: 14px;
+}
+.list:hover img
+{
+	transform: translateY(-30px) scale(1.1);
+	transition: all 1s;
+}
+/*主题推荐*/
+.places h3 span img
+{
+	width:35px;
+	margin-right: 5px;
+}
+.bigPlaces>img
+{
+	float: left;
+	width: 30%;
+	/*height: 316px;*/
+	height: 8%;
+}
+.bigPlaces>ul
+{
+	float: right;
+	width: 70%;
+}
+.bigPlaces>ul>li
+{
+	width: 32%;
+	position: relative;
+	display: inline-block;
+}
+.bigPlaces>ul>li:nth-child(3),
+.bigPlaces>ul>li:last-child
+{
+	width: 34%;
+}
+.bigPlaces>ul>li>img
+{
+	width: 102%;
+	height: 200px;
+	vertical-align: bottom;
+}
+.bigPlaces>ul>li>d>img
+{
+	width: 40%;
+	position: absolute;
+	top: 25%;
+	left: 40%;
+	width: 80px;
+	display: none;
+}
+.bigPlaces>ul>li:hover img
+{
+	display: block;
+}
+/*热门目的地*/
+.place h3 span img
+{
+	width:35px;
+	margin-right: 5px;
+}
+.place ul li
+{
+	display: inline-block;
+	width: 32%;
+	position: relative;
+}
+.place ul li img
+{
+	width: 100%;
+}
+.place ul li d
+{
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	bottom: 10px;
+	left: 100px;
+	display: none;
+}
+.place ul li:hover d
+{
+	display: block;
+}
+/*旅行贴士*/
+.tip h3 span img
+{
+	width:35px;
+	margin-right: 5px;
+}
+.bigTip>img
+{
+	width: 100%;
+}
+/*底部*/
+footer
+{
+	background: white;
+	display: flex;
+	justify-content: space-between;
+	padding: 3% 10% 0 10%;
+	border-bottom: 1px solid #C0C0C0;
+	margin-top: 80px;
+}
+footer img
+{
+	width: 100px;
+}
+footer h4
+{
+	font-weight: bold;
+	margin-bottom: 10%;
+}
+footer span
+{
+	color: #07D79D;
+}
+.our h4,
+.serve h4
+{
+	margin-bottom: 27%;
+}
+.foot
+{
+	background: white;
+	padding: 1% 10% 0 10%;
+	overflow: hidden;
+}
+.foot img
+{
+	float: right;
+	margin-top: -30px;
+}
+.foot span
+{
+	color: #07D79D;
+}

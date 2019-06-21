@@ -1,0 +1,91 @@
+/* 云 */
+#navBar
+{
+	position: relative;
+}
+.navs span 
+{
+	position: absolute;
+	top: 5px;
+	left: 720px;
+	width: 83px;
+	height: 42px;
+	background: url(../img/cloud.png) no-repeat;
+}
+/*banner*/
+.banner
+{
+	padding: 100px 30px 25px 30px;
+}
+.banner span:nth-child(2),
+.banner span:nth-child(5)
+{
+	margin: 0 30%;
+}
+.banner span:nth-child(5)
+{
+	margin-left: 31%;
+}
+.banner span img
+{
+	width: 25px;
+}
+/*需求*/
+.need
+{
+	background-color: white;
+	padding: 1%;
+	box-shadow: 1px 1px 25px 1px #ccc;
+	margin: 30px auto;
+}
+.need h3
+{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 8px;
+}
+.need h3 small
+{
+	color: #07D79D;
+}
+.content
+{
+	padding: 5% 25%;
+}
+.content label
+{
+	font-size: 20px;
+	font-weight: normal;
+	margin-right: 15px;
+	width: 90px;
+}
+.content input
+{
+	padding: 5px;
+	margin: 10px 0;
+	background-color: transparent;
+	border: 1px solid #ccc;
+}
+input[type =text]
+{
+	width: 156px;
+}
+input[type =number]
+{
+	width: 120px;
+}
+.content span
+{
+	margin: 0 5px;
+}
+#one:checked+span
+{
+	color: #07D79D;
+}
+.content a
+{
+	background-color: #07D79D;
+	color: white;
+	border-radius: 50px;
+	padding: 10px 50px;
+	margin-left:35%;
+}

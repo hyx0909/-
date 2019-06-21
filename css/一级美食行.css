@@ -1,0 +1,167 @@
+/* 云 */
+#navBar
+{
+	position: relative;
+}
+.navs span 
+{
+	position: absolute;
+	top: 5px;
+	left: 460px;
+	width: 83px;
+	height: 42px;
+	background: url(../img/cloud.png) no-repeat;
+}
+/*banner*/
+.bigBanner
+{
+	background: url(../img/banner1.png) no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 400px;
+	color: white;
+	position: relative;
+}
+.banner
+{
+	width: 20%;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,.3);
+	position: absolute;
+	top: 22%;
+	left: 15%;
+	padding: 3% 0 2% 3%;
+}
+.banner img
+{
+	width: 28px;
+	height: 28px;
+	margin-left: 5px;
+}
+.banner input
+{
+	color: #000000;
+}
+.banner input:last-child
+{
+	color: black;
+	width: 75%;
+}
+/*八大菜系*/
+.cuisines
+{
+	text-align: center;
+}
+.cuisines ul
+{
+	margin-top: 20px;
+}
+.cuisines ul li
+{
+	display: inline-block;
+	width: 14%;
+	height: 230px;
+	margin: 0 10px;
+	position: relative;
+}
+.cuisines ul li img
+{
+	width: 100%;
+	height: 100%;
+}
+.cuisines ul li span
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.5);
+	color: white;
+	writing-mode: vertical-lr;
+	font-size: 25px;
+	padding-left: 40%;
+	display: none;
+}
+.cuisines ul li:hover span
+{
+	display: block;
+}
+/*地域特色美食*/
+.regional
+{
+	text-align: center;
+}
+.regional img
+{
+	width:100%;
+}
+.regional .word
+{
+	background-color: white;
+	text-align: left;
+	overflow: hidden;
+}
+.regional .word p
+{
+	margin: 5px 0;
+}
+.regional .word small span
+{
+	float: right;
+	color: orange;
+	font-size: 25px;
+}
+.zong:hover
+{
+	border:2px solid #07D79D;
+	transition: all .5s;
+}
+.zong p a
+{
+	color: black;
+}
+/*小巷*/
+.alleyway
+{
+	text-align: center;
+}
+.alleyway .left a
+{
+	position: relative;
+}
+.alleyway .left span
+{
+	position: absolute;
+	top: -100px;
+	left: 30px;
+	background-color:rgba(7,215,157,.9);
+	color: white;
+	width: 80%;
+	padding:30px 10px;
+	display: none;
+}
+.alleyway .left a:hover span
+{
+	display: block;
+}
+.alleyway img
+{
+	width: 30%;
+	margin: 10px;
+}
+.alleyway .left
+{
+	float: left;
+	width: 75%;
+}
+.alleyway .right
+{
+	float: right;
+	width: 25%;
+}
+.alleyway .right img
+{
+	width: 100%;
+	height: 530px;
+}

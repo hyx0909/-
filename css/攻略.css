@@ -1,0 +1,372 @@
+/* 云 */
+#navBar
+{
+	position: relative;
+}
+.navs span 
+{
+	position: absolute;
+	top: 5px;
+	left: 1120px;
+	width: 83px;
+	height: 42px;
+	background: url(../img/cloud.png) no-repeat;
+}
+/*banner*/
+.banner
+{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.banner>ul
+{
+	position: absolute;
+	top: 42%;
+	left: 28%;
+	z-index: 99;
+}
+.banner ul li
+{
+	float: left;
+}
+.banner ul li img
+{
+	width:120px;
+	height: 120px;
+	border: 1px solid white;
+	margin: 5px;
+}
+.banner ul li a
+{
+	color: white;
+	background: #07D79D;
+	padding:10px 12px;
+	border-radius:50% ;
+}
+.banner ul li:first-child,
+.banner ul li:last-child
+{
+	padding-top: 60px;
+}
+.banner .last
+{
+	position: absolute;
+	top:0;
+	left: 0;
+}
+.banner .last img
+{
+	width: 100%;
+}
+/*热门目的地*/
+.hot h3
+{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+}
+.hot h3 span img
+{
+	width: 22px;
+	margin-right: 5px;
+}
+.hot h3 i
+{
+	color: #D4D4D4;
+}
+.hot>ul>li
+{
+	display: inline-block;
+	padding: 0 35px;
+}
+.hot ul li a
+{
+	color: #222222;
+}
+.hot ul li:first-child a
+{
+	color: #07D79D;
+}
+.hot .place
+{
+	width: 100%;
+}
+.place li
+{
+	width: 32.333%;
+	display: inline-block;
+	padding: 0;
+	margin-bottom: 10px;
+	position: relative;
+}
+.place li img
+{
+	width: 100%;
+}
+.place d
+{
+	position: absolute;
+	width: 81%;
+	bottom:20px;
+	left: 35px;
+	background-color: rgba(0,0,0,.5);
+	color: white;
+	text-align: left;
+	padding: 10px;
+}
+.hot>a
+{
+	color: white;
+	background-color: #07D79D;
+	border: 1px solid white;
+	padding: 5px 10px;
+	text-align: center;
+	box-shadow: 1px 5px 8px 0px #ccc;
+	margin-left: 40%;
+}
+.hot>a:hover
+{
+	text-decoration: none;
+}
+/*当季推荐*/
+.groom
+{
+	margin-top: 50px;
+}
+.groom h3 span img
+{
+	width: 22px;
+	margin-right: 5px;
+}
+.groom h3 i
+{
+	color: #D4D4D4;
+}
+.groom>ul>li
+{
+	display: inline-block;
+	padding: 0 35px;
+}
+.groom ul li a
+{
+	color: #222222;
+}
+.groom ul li:last-child a
+{
+	color: #07D79D;
+}
+/*list*/
+.list
+{
+	overflow: hidden;
+	margin: 25px 0;
+	position: relative;
+}
+.list>img
+{
+	width:65%;
+	float: left;
+	border: 5px solid white;
+	box-shadow: 0 0 15px 0 #ccc;
+}
+.list f
+{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	color: white;
+	font-size: 30px;
+	display: none;
+}
+.list:hover f
+{
+	display: block;
+}
+.list .right
+{
+	float: right;
+	width: 30%;
+}
+.list .right span
+{
+	margin: 20px 0;
+}
+.list .right .top
+{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.list .right .top h3
+{
+	float: left;
+	margin: 0;
+}
+.list .right .top img
+{
+	float: right;
+	width: 20px !important;
+	margin: 5px;
+}
+.list .right d
+{
+	color: #262626;
+}
+.list .right d e
+{
+	color: #ccc;
+}
+/*lists*/
+.lists
+{
+	overflow: hidden;
+	margin: 25px 0;
+	position: relative;
+}
+.lists>img
+{
+	width:65%;
+	float: right;
+	border: 5px solid white;
+	box-shadow: 0 0 15px 0 #ccc;
+}
+.lists f
+{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: white;
+	font-size: 30px;
+	display: none;
+}
+.lists:hover f
+{
+	display: block;
+}
+.lists .left
+{
+	float: left;
+	width: 30%;
+}
+.lists .left span
+{
+	margin: 20px 0;
+}
+.lists .left .top
+{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.lists .left .top h3
+{
+	float: left;
+	margin: 0;
+}
+.lists .left .top img
+{
+	float: right;
+	width: 20px !important;
+	margin: 5px;
+}
+.groom>a
+{
+	color: white;
+	background-color: #07D79D;
+	border: 1px solid white;
+	padding: 5px 10px;
+	text-align: center;
+	box-shadow: 1px 5px 8px 0px #ccc;
+	margin-left: 40%;
+}
+.groom>a:hover
+{
+	text-decoration: none;
+}
+/*底部*/
+footer
+{
+	margin-top: 50px;
+}
+/*模态框*/
+.modal
+{
+	background-color: rgba(0,0,0,.3); 
+	padding: 20px;
+}
+.modal .header
+{
+	background: white;
+	width: 300px;
+	height: 150px;
+	margin: 0 auto;
+	text-align: center;
+	padding:10px 20px;
+	border-radius: 15px;
+	padding-bottom: 50px;
+}
+.header p
+{
+	text-align: left;
+	font-family: "楷体";
+	font-size: 25px;
+}
+.header a
+{
+	padding: 5px 28px;
+}
+.header a:hover
+{
+	text-decoration: none;
+}
+.header img
+{
+	padding: 0 15px;
+}
+@media only screen and (max-width: 800px) {
+	.loading
+	{
+		display: none;
+	}
+	.banner
+	{
+		height: 280px;
+		margin-top: 0;
+	}
+	.banner ul
+	{
+		position: absolute;
+		top: 24%;
+		left: 18%;
+		z-index: 99;
+	}
+	.banner ul li:first-child,
+	.banner ul li:last-child
+	{
+		padding-top: 40px;
+	}
+	.banner ul li b
+	{
+		padding:5px 8px;
+	}
+	.hot>ul>li
+	{
+		padding: 0;
+	}
+	.banner ul li img
+	{
+		width:80px;
+		height: 80px;
+	}
+	.place d
+	{
+		width:100%;
+		bottom:20px;
+		left: 0;
+		background-color: rgba(0,0,0,.5);
+		color: white;
+		text-align: left;
+		padding: 10px;
+	}
+	#cloud
+	{
+		display: none;
+	}
+}

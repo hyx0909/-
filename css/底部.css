@@ -1,0 +1,59 @@
+/*底部*/
+footer
+{
+	width: 100%;
+	background: white;
+	display: flex;
+	justify-content: space-between;
+	padding: 3% 10% 0 10%;
+	border-bottom: 1px solid #C0C0C0;
+}
+footer img
+{
+	width: 100px;
+}
+footer h4
+{
+	font-weight: bold;
+	margin-bottom: 10%;
+}
+footer span
+{
+	color: #07D79D;
+}
+.our h4
+{
+	margin-bottom: 16%;
+}
+.serve h4
+{
+	margin-bottom: 27%;
+}
+.foot
+{
+	background: white;
+	padding: 1% 10% 0 10%;
+	overflow: hidden;
+}
+.foot img
+{
+	float: right;
+	margin-top: -30px;
+}
+.foot span
+{
+	color: #07D79D;
+}
+@media only screen and (max-width:800px) {
+	footer,
+	.foot
+	{
+		padding: 3% 5% 0 5%;
+	}
+	footer .our,
+	footer .serve,
+	footer .app
+	{
+		display: none;
+	}
+}
