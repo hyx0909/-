@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/loaders.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/loading.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="css/secondFood.css">
+		<link rel="stylesheet" type="text/css" href="css/secondFoodMedia.css"/>
+		
+		<!--<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />-->
+		
+		<link rel="icon" type="text/css" href="img/logo.ico">
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="bootstrap/js/bootstrap.js"></script>
+		
+		<!--<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/colorfinder-1.1.js"></script>
+		<script src="js/gridScrollFx.js"></script>
+		<script>
+			new GridScrollFx(document.getElementById('grid'), {
+				viewportFactor: 0.4
+			});
+		</script>
+		<script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>-->
+		
+		<title>美食行</title>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.loading').addClass('.loader-chanage')
+				$('.loading').fadeOut(300)
+			})
+		</script>
+	</head>
+	<!--loading页开始-->
+	<div class="loading">
+		<div class="loader">
+			<div class="loader-inner pacman">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+	<!--loading页结束-->
+	<body>
+		<!--导航-->
+		<header class="navbar-fixed-top navs">
+			<a href="index.html"><img src="img/logo.png"></a>
+			<span id="cloud"></span>
+			<ul id="navBar">
+				<li><a href="index.html" data-lang = "index">首页</a></li>
+				<li><a href="firstFood.html" data-lang = "cuisines">美食行</a></li>
+				<li><a href="independent.html" data-lang = "free">自由行</a></li>
+				<li><a href="customizationOne.html" data-lang = "need">高端定制</a></li>
+				<li><a href="depth.html" data-lang = "depth">深度游</a></li>
+				<li><a href="local.html" data-lang = "local">当地拼团</a></li>
+				<li><a href="strategy.html" data-lang = "stragety">攻略</a></li>
+			</ul>
+			<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/style.js" type="text/javascript" charset="utf-8"></script>
+			<p data-toggle = "modal" data-target = "#myModal"><img src="img/sou.png"/>注册/登录</p>
+			<div class="modal fade" id="myModal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+								<button class="close"data-dismiss="modal">&times;</button>
+								<h4>用户登录</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<i class="glyphicon glyphicon-user">账户</i>
+									<input type="text"placeholder="请输入用户名"/>
+								</div>
+								<div class="form-group">
+									<i class="glyphicon glyphicon-lock">密码</i>
+									<input type="password"placeholder="请输入密码"/>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-primary"data-dismiss="modal">登录</button>
+							<button class="btn btn-primary"data-dismiss="modal">去注册</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--banner-->
+		<div class="bigBanner">
+			<div class="banner">
+				<label for="shi">我从</label><input type="text" id="shi"/>
+				<span class="glyphicon glyphicon-plane"></span>
+				<label for="shi">要去</label><input type="text" id="shi"/>
+				<a href="customizationOne.html">GO</a>
+			</div>
+			<h1>粤</h1>
+			<!--<script type="text/javascript">
+				//获取元素
+				var a = document.querySelector('.banner a'),
+				    aInput = document.querySelectorAll('.banner input');
+				a.onclick = function(){
+					if(!aInput.value){
+						alert('地址不能为空')
+						return false;
+					}
+					else
+					{}
+				}
+			</script>-->
+		</div>
+		<!--导航-->
+		<div class="yue">
+			<div class="left">
+				<h3><span>粤</span>·原汁原味</h3>
+				<small>GUANGZHOU CUISINE ORIGINAL</small>
+				<p>粤菜主要由广州菜(也称广府菜)、潮州菜(也称潮汕菜)、东江菜(也称客家菜)三支组成；讲究一个“上天入地，无所不吃”其中，广式点心品种繁多，单品就有1000余种，分分钟挑花了眼。</p>
+			</div>
+			<div class="right">
+				<img src="img/banner2.1.png"/>
+			</div>
+		</div>
+		<!--内容-->
+		<div class="content container">
+			<h2>带你吃遍<span>粤</span>菜</h2>
+			<span>TAKE YOU TO EAT CANTONESE FOOD</span>
+			<div class="img">
+				<ul>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content1.jpg"/>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content2.jpg"/>
+							<span><h4>香港</h4><h6>HONGKONG</h6></span>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content3.jpg"/>
+							<span><h4>河源</h4><h6>HEYUAN</h6></span>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content4.png"/>
+							<span><h4>湛江</h4><h6>ZHANJINAG</h6></span>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content5.png"/>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content6.png"/>
+							<span><h4>清远</h4><h6>QINGYUAN</h6></span>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content7.png"/>
+							<span><h4>阳江</h4><h6>YANGJINAG</h6></span>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content8.png"/>
+							<span><h4>汕尾</h4><h6>SHANWEI</h6></span>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+						<img src="img/content9.png"/>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content10.png"/>
+							<span><h4>珠海</h4><h6>ZHUHAI</h6></span>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content11.png"/>
+							<span><h4>江门</h4><h6>JIANGMEN</h6></span>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content12.png"/>
+							<span><h4>肇庆</h4><h6>ZHAOQING</h6></span>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content13.png"/>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content14.png"/>
+							<span><h4>深圳</h4><h6>SHENZHEN</h6></span>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content15.png"/>
+							<span><h4>汕头</h4><h6>SHANTOU</h6></span>
+						</a>
+					</li>
+					<li>
+						<a href="#12866129/MONOCLE-issue-69">
+							<img src="img/content16.png"/>
+							<span><h4>揭阳</h4><h6>JIEYANG</h6></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--底部-->
+		<footer>
+			<div class="leads">
+				<h4>中国领先的美食旅行服务平台</h4>
+				<ul>
+					<li>覆盖全球200多个国家和地区</li>
+					<li><span>100,000,000</span>位旅行者</li>
+					<li><span>920,000</span>家国际酒店</li>
+					<li><span>21,000,000</span>条真实点评</li>
+					<li><span>302,000,000</span>次攻略下载</li>
+					<li><span>中国旅游业第一部美食主题旅行</span></li>
+				</ul>
+			</div>
+			<div class="our">
+				<h4>关于我们</h4>
+				<ul>
+					<li>关于味蕾行</li>
+					<li>网络信息侵权通知指引</li>
+					<li>隐私政策 服务协议</li>
+					<li>联系我们</li>
+					<li>网站地图</li>
+					<li><span>加入味蕾行</span></li>
+				</ul>
+			</div>
+			<div class="serve">
+				<h4>旅行服务</h4>
+				<ul>
+					<li>旅游攻略</li>
+					<li>旅游特价</li>
+					<li>旅游问答</li>
+					<li>旅游指南</li>
+					<li>旅游资讯</li>
+					<li><span>全球供应商入驻</span></li>
+				</ul>
+			</div>
+			<div class="watch">
+				<h4>微信公众号</h4>
+				<img src="img/watch.jpg"/>
+			</div>
+			<div class="watch">
+				<h4>官方小程序</h4>
+				<img src="img/watch.jpg"/>
+			</div>
+			<div class="watch">
+				<h4>APP下载</h4>
+				<img src="img/watch.jpg"/>
+			</div>
+		</footer>
+		<div class="foot">
+			<p>Copyright 2017 bastone.com All Rights Reserved　版权所有·味蕾行　鄂ICP备00000000号-1</p>
+			<p>营业执照 新出网证（京）字242号 全国统一客服电话：<span>022-4562-246</span></p>
+			<img src="img/foot2.png"/>
+		</div>
+	</body>
+	</body>
+</html>

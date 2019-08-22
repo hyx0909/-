@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/loaders.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/loading.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="css/secondFoodDetail.css">
+		<link rel="stylesheet" type="text/css" href="css/secondFoodDetailMedia.css"/>
+		<link rel="icon" type="text/css" href="img/logo.ico">
+		
+		<link rel="stylesheet" type="text/css" href="css/preview.css"/>
+		<script src="js/preview.js"></script>
+		
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.carousel.js"></script>
+		<script src="js/jquery.fly.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bootstrap/js/bootstrap.js"></script>
+		<title>详情</title>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.loading').addClass('.loader-chanage')
+				$('.loading').fadeOut(300)
+			})
+		</script>
+	</head>
+	<!--loading页开始-->
+	<div class="loading">
+		<div class="loader">
+			<div class="loader-inner pacman">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+	<!--loading页结束-->
+	<body>
+		<!--导航-->
+		<header class="navbar-fixed-top navs">
+			<a href="index.html"><img src="img/logo.png"></a>
+			<span id="cloud"></span>
+			<ul id="navBar">
+				<li><a href="index.html" data-lang = "index">首页</a></li>
+				<li><a href="firstFood.html" data-lang = "cuisines">美食行</a></li>
+				<li><a href="independent.html" data-lang = "free">自由行</a></li>
+				<li><a href="customizationOne.html" data-lang = "need">高端定制</a></li>
+				<li><a href="depth.html" data-lang = "depth">深度游</a></li>
+				<li><a href="local.html" data-lang = "local">当地拼团</a></li>
+				<li><a href="strategy.html" data-lang = "stragety">攻略</a></li>
+			</ul>
+			<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/style.js" type="text/javascript" charset="utf-8"></script>
+			<p data-toggle = "modal" data-target = "#myModal"><img src="img/sou.png"/>注册/登录</p>
+			<div class="modal fade" id="myModal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+								<button class="close"data-dismiss="modal">&times;</button>
+								<h4>用户登录</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<i class="glyphicon glyphicon-user">账户</i>
+									<input type="text" placeholder="请输入用户名"/>
+								</div>
+								<div class="form-group">
+									<i class="glyphicon glyphicon-lock">密码</i>
+									<input type="password" placeholder="请输入密码"/>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-primary" data-dismiss="modal">登录</button>
+							<button class="btn btn-primary" data-dismiss="modal">去注册</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="content container">
+			<div class="top">
+				<div class="left">
+					<div class="wrap">
+						<div class="main">
+							<img src="img/xiang1.png"/>
+							<div class="hover"></div><!--放大镜-->
+						</div>
+						<div class="box"><!--视口-->
+							<div class="bigBox"><!--包括内容的盒子-->
+								<img src="img/xiang1.png"/>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">
+						//获取元素
+						var wrap = document.querySelector(".wrap");
+						var hover = document.querySelector(".hover");
+						var bigBox = document.querySelector(".bigBox");
+						//获取元素的宽高
+						var wrapWidth,wrapHeight,
+						    hoverWidth,hoverHeight,
+						    bigBoxWidth,bigBoxHeight;
+						//绑定事件
+						wrap.onmousemove = function(e){
+							//计算当前各个容器的宽高
+							hoverWidth || (hoverWidth = hover.offsetWidth);//offset偏移值
+							hoverHeight || (hoverHeight = hover.offsetHeight);
+					
+							wrapWidth || (wrapWidth = wrap.offsetWidth);
+							wrapHeight || (wrapHeight = wrap.offsetHeight);
+					
+							bigBoxWidth || (bigBoxWidth = bigBox.offsetWidth);
+							bigBoxHeight || (bigBoxHeight = bigBox.offsetHeight);
+					
+							//计算图片在js中显示位置
+							var offset = this.getBoundingClientRect();//包含元素的宽高，xy位置，上下左右距离
+							//获取鼠标的坐标
+							var x = e.pageX - offset.left;
+							var y = e.pageY - offset.top;
+							//鼠标在放大镜中的位置
+							var left = x - parseInt(hoverWidth / 2, 10);//parseInt取整
+							var top = y - parseInt(hoverHeight / 2, 10);
+							//判断是否到边
+							if(left < 0){
+								left = 0;
+							}
+							if(top < 0){
+								top = 0;
+							}
+							//判断left的偏移量
+							if(left + hoverWidth > wrapWidth){
+								left = wrapWidth - hoverWidth;
+							}
+							if(top + hoverHeight > wrapHeight){
+								top = wrapHeight - hoverHeight;
+							}
+							//移动放大镜
+							hover.style.left = left+'px';
+							hover.style.top = top + 'px';
+					
+							//计算大图
+							var bigX = (left / (wrapWidth - hoverWidth))*(bigBoxWidth - wrapWidth);
+							var bigY = (top / (wrapHeight - hoverHeight))*(bigBoxHeight - wrapHeight);
+							//移动图片
+							bigBox.style.left = (bigX * -1) + "px";
+							bigBox.style.top = (bigY * -1) + "px";
+						}
+					</script>
+					<ul class="imgs">
+						<li><img src="img/contact1.1.jpg"></li>
+						<li><img src="img/contact2.1.jpg"></li>
+						<li><img src="img/contact3.1.jpg"></li>
+						<li><img src="img/contact4.1.jpg"></li>
+						<li><img src="img/contact5.1.jpg"></li>
+					</ul>
+					<div class="last">
+						<img src="">
+					</div>
+					<script type="text/javascript">
+						$(function(){
+							$('.imgs li img').mouseover(function(){
+								$('.last img').attr('src',this.src)
+								$('.last').show()
+							})
+							$('.imgs li img').mouseout(function(){
+								$('.last').hide()
+							})
+						})
+					</script>
+					<!--日历-->
+					<div class="big">
+						<!--年份选择-->
+						<div class="head">
+							<span class="prev"style="padding-left: 5px;"><</span>
+							<span class="year">2018-12</span>
+							<span class="next"style="padding-left: 5px;">></span>
+						</div>
+						<!--星期-->
+						<div class="banner">
+							<ul>
+								<li>日</li>
+								<li>一</li>
+								<li>二</li>
+								<li>三</li>
+								<li>四</li>
+								<li>五</li>
+								<li>六</li>
+							</ul>
+						</div>
+						<!--日期-->
+						<div class="foots">
+							<ul id="dates">
+							</ul>
+						</div>
+					</div>
+					<script type="text/javascript">
+						window.onload = function(){
+							//声明通用方法
+							function creat(currYear,currMonth){
+								//获取当前年月
+								var currDate = new Date(currYear,currMonth),
+								    year = currDate.getFullYear(),
+								    month = currDate.getMonth()+1,
+								    yearEle = document.getElementsByClassName('year')[0];
+								//设置年月
+								yearEle.innerHTML = year + '-' + month;
+								//定义全局变量
+								var html = '';
+								//取得一号为周几
+								currDate.setDate(1);
+								var weekday = currDate.getDay();
+								for(var i=0;i<weekday;i++){
+									html += '<li>&nbsp;</li>'
+								}
+								//获得月份的天数
+								var nextMonth = new Date(year,month,0);
+								var dates = nextMonth.getDate();
+								for(var j=1;j<=dates;j++){
+									html += '<li>'+j+'</li>'
+								}
+								//将生成的信息显示在页面上
+								var datesEle = document.getElementById('dates');
+								datesEle.innerHTML = html;
+							}
+							//初始化对象
+							var date = new Date();
+							creat(date.getFullYear(),date.getMonth());
+							//获取对象
+							var prev = document.getElementsByClassName('prev')[0],
+								next = document.getElementsByClassName('next')[0],
+								year = document.getElementsByClassName('year')[0];
+							//绑定单击事件
+							prev.onclick = function(){
+								var arr = year.innerHTML.split('-');
+								creat(parseInt(arr[0]),parseInt(arr[1])-2);
+							}
+							next.onclick = function(){
+								var arr = year.innerHTML.split('-');
+								creat(parseInt(arr[0]),parseInt(arr[1]));
+							}
+							//购物车
+							var btnleft = document.getElementsByClassName("btnl");
+							var btnright = document.getElementsByClassName("btnr");
+							var txt = document.getElementsByClassName("txt");
+							var smallprice = document.getElementsByClassName("smallprice");
+							for(var i=0;i<btnleft.length;i++){
+								//获得每一个按钮的索引 由于按钮 数量文本框的索引值都是相同的 因而通过索引对索引来改变数量
+								btnleft[i].index=i;
+								btnleft[i].onclick=function(){
+									var val=txt[this.index].value;
+									val--;
+									if(val<=1){
+										val=1;
+									}
+									txt[this.index].value=val;
+									addsmall(this.index);
+								};
+								btnright[i].index=i;
+								btnright[i].onclick=function(){
+									var val=txt[this.index].value;
+									val++;
+									txt[this.index].value=val;
+									addsmall(this.index);
+								};
+							}
+							//2.通过数量与price来计算小计
+							function addsmall(index){
+								 smallprice[index].innerText=(txt[index].value*4399)
+							}
+							//图片拖动
+							 var preview = new Preview({
+							    imgWrap: 'wrap' ,// 指定该容器里的图片点击预览
+							})
+						}
+					</script>
+				</div>
+				<div class="right">
+					<h3>【西藏美食路线】耗牛肉-青稞酒-酥油糍粑，五天四晚美食之旅(无强制消费+酒店星级随心选)</h3>
+					<div class="price">
+						<span>价格</span>
+						<span>&nbsp;<b>￥4399</b>起/人</span>
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;月销：317|评论：784</span>
+					</div>
+					<ul>
+						<li>产品编号：2018010234</li>
+						<li>行程信息：北京出发|5天4晚|约4个景点</li>
+						<li>浏览城市：拉萨、林芝、日喀则</li>
+						<li>预订须知：此产品需二次确认，商家在24个工作小时内(工作日9:00-18：00)核实是否有位，请提前五天预定。</li>
+						<li>服务特色：如实描述</li>
+						<li>产品特色：及时确认</li>
+					</ul>
+					<div class="choose">
+						<h3>出发日期<input type="date" class="date"></h3>
+						<h3>出发城市<input type="text" class="city"></h3>
+						<h3 class="number">出行人数<button class="btnl">-</button><input class="txt" type="text" value="1"><button class="btnr">+</button><span>人</span>
+						<h3>总&nbsp;&nbsp;价&nbsp;￥<b class="smallprice">4399</b></h3>
+						<a href="#" class="add button" onclick="return false">加入购物车</a>
+						<a href="customizationOne.html" class="hope">立即预定</a>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="nav">
+					<ul class="nav nav-tabs">
+						<li><a href="#one" data-toggle="tab">航班介绍</a></li>
+						<li><a href="#two" data-toggle="tab">美食分解</a></li>
+						<li><a href="#three" data-toggle="tab">购买须知</a></li>
+						<li><a href="#" data-toggle="tab">用户评价</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="active tab-pane plane" id="one">
+							<h3><span>·</span>航班信息</h3>
+							<p>&nbsp;&nbsp;此航班仅供参考，对应的航班时间均为当地时间，低价折扣机票存在航班调整的可能(包括航空公司、航班号、起飞时间的变化等)，故机票情况以最终电子客票为准。</p>
+							<p>&nbsp;&nbsp;第一天&nbsp;北京-林芝</p>
+							<p>&nbsp;&nbsp;第八天&nbsp;林芝-北京</p>
+							<h3><span>·</span>航班信息</h3>
+							<div id="wrap">
+								<img src="img/imgs1.png"/>
+								<img src="img/imgs2.png"/>
+								<img src="img/imgs3.png"/>
+							</div>
+						</div>
+						<div class="tab-pane food" id="two">
+							<h3><span>1、</span>糌粑</h3>
+							<p>糌粑是藏族人民的主食。把青稞、豌豆炒熟，磨细成面，吃时用酥油茶拌匀，捏成小团食用。吃糌粑很方便，什么时候饿了，可随时倒出些炒面，添上一块酥油，和上已备好的酥油茶或者热水，在木碗里捏好就可以开吃。对于习惯吃糌粑的人来说，糌粑还是很好吃的，青稞炒面的清香，因加了酥油和奶茶，还有一股奶香。西藏的餐厅大部分有糌粑，一定要尝一尝，否则怎么算来过西藏呢</p>
+							<img src="img/food6.jpg">
+							<h3><span>2、</span>甜茶</h3>
+							<p>大多数来西藏旅游的人喝不惯油酥茶，但却喜欢喝甜茶，特别在拉萨，街头甜茶馆随处可见。甜茶在我喝来有些像奶茶的味道,甜甜的,浓郁的奶香,西藏海拔高气温低，喝上一杯热热的甜茶,会很舒服，拉萨街边找一家甜茶馆，来一壶甜茶，发发呆能坐一下午。推荐光明甜茶馆，甜茶很地道，是拉萨充满市井人情的地方，店里很多藏族人，慵懒的午后，在茶馆里喝喝甜茶也非常不错，饿了可以点一份藏面。</p>
+							<img src="img/food5.jpg">
+							<h3><span>3、</span>藏式牦牛肉火锅</h3>
+							<p>作为一名吃货，最吸引人的，还是藏区独特的美食——藏式牦牛肉火锅。天然的牧场、雪域高原上独特的环境加上佛系的放养方式，让牦牛肉比其他牛肉的味道更细嫩多汁，牦牛肉也非常滋补，加上时令蔬菜，荤素搭配，非常香。藏式火锅的特别之处还在于吃法，“不是涮而是煮”。提前炖煮好的牦牛肉被</p>
+							<img src="img/food3.jpg">
+						</div>
+						<div class="tab-pane buy" id="three">
+							<p><span>*</span>此产品需二次确认，商家在24个工作小时内(工作日9:00-18：00)核实是否有位，请提前五天预定。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<footer>
+			<div class="leads">
+				<h4>中国领先的美食旅行服务平台</h4>
+				<ul>
+					<li>覆盖全球200多个国家和地区</li>
+					<li><span>100,000,000</span>位旅行者</li>
+					<li><span>920,000</span>家国际酒店</li>
+					<li><span>21,000,000</span>条真实点评</li>
+					<li><span>302,000,000</span>次攻略下载</li>
+					<li><span>中国旅游业第一部美食主题旅行</span></li>
+				</ul>
+			</div>
+			<div class="our">
+				<h4>关于我们</h4>
+				<ul>
+					<li>关于味蕾行</li>
+					<li>网络信息侵权通知指引</li>
+					<li>隐私政策 服务协议</li>
+					<li>联系我们</li>
+					<li>网站地图</li>
+					<li><span>加入味蕾行</span></li>
+				</ul>
+			</div>
+			<div class="serve">
+				<h4>旅行服务</h4>
+				<ul>
+					<li>旅游攻略</li>
+					<li>旅游特价</li>
+					<li>旅游问答</li>
+					<li>旅游指南</li>
+					<li>旅游资讯</li>
+					<li><span>全球供应商入驻</span></li>
+				</ul>
+			</div>
+			<div class="watch">
+				<h4>微信公众号</h4>
+				<img src="img/watch.jpg"/>
+			</div>
+			<div class="watch">
+				<h4>官方小程序</h4>
+				<img src="img/watch.jpg"/>
+			</div>
+			<div class="watch app">
+				<h4>APP下载</h4>
+				<img src="img/watch.jpg"/>
+			</div>
+		</footer>
+		<div class="foot">
+			<p>Copyright 2017 bastone.com All Rights Reserved　版权所有·味蕾行　鄂ICP备00000000号-1</p>
+			<p>营业执照 新出网证（京）字242号 全国统一客服电话：<span>022-4562-246</span></p>
+			<img src="img/foot2.png"/>
+		</div>
+		<!--返回首页-->
+		<div class="back">
+			<a href="index.html">返回首页</a>
+		</div>
+		<!--购物车-->
+		<div class="m-sidebar">
+			<div class="cart">
+				<i id="end"></i>
+				<b>购物车</b>
+			</div>
+		</div>
+		<div id="msg">已成功加入购物车！</div>
+		<script>
+			$(function() {
+				$(".add").click(function(event){
+					$("#msg").show().animate({width: '250px'}, 100).fadeOut(2000);
+				});
+			});
+		</script>
+	</body>
+</html>

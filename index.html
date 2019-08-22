@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/loaders.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/loading.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/indexMedia.css"/>
+		<link rel="icon" type="text/css" href="img/logo.ico">
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.carousel.js"></script>
+		<script src="bootstrap/js/bootstrap.js"></script>
+		<title></title>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.loading').addClass('.loader-chanage')
+				$('.loading').fadeOut(300)
+			})
+			$(function(){
+				function getLanguageFile(type){
+					$.getJSON('./language/'+type+'.json',function(result){
+						$('[data-lang]').each(function(idx,ele){
+							var $ele = $(ele)
+							$(ele).html(result[$ele.attr('data-lang')])
+						})
+					})
+				}
+				$('#zh').click(function(){
+					getLanguageFile('ch')
+				})
+				$('#en').click(function(){
+					getLanguageFile('en')
+				})
+			})
+		</script>
+	</head>
+	<!--loading页开始-->
+	<div class="loading">
+		<div class="loader">
+			<div class="loader-inner pacman">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+	<!--loading页结束-->
+	<body>
+		<!--导航-->
+		<header class="navbar-fixed-top navs">
+			<a href="index.html"><img src="img/logo.png"></a>
+			<span id="cloud"></span>
+			<ul id="navBar">
+				<li><a href="index.html" data-lang = "index">首页</a></li>
+				<li><a href="firstFood.html" data-lang = "cuisines">美食行</a></li>
+				<li><a href="independent.html" data-lang = "free">自由行</a></li>
+				<li><a href="customizationOne.html" data-lang = "need">高端定制</a></li>
+				<li><a href="depth.html" data-lang = "depth">深度游</a></li>
+				<li><a href="local.html" data-lang = "local">当地拼团</a></li>
+				<li><a href="strategy.html" data-lang = "stragety">攻略</a></li>
+			</ul>
+			<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/style.js" type="text/javascript" charset="utf-8"></script>
+			<p data-toggle = "modal" data-target = "#myModal" data-lang = "login"><img src="img/sou.png"/>注册/登录</p>
+			<div class="modal fade" id="myModal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+								<button class="close"data-dismiss="modal">&times;</button>
+								<h4>用户登录</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<i class="glyphicon glyphicon-user">&ensp;账户</i>
+									<input type="text"placeholder="请输入用户名" name="username">
+								</div>
+								<div class="form-group">
+									<i class="glyphicon glyphicon-lock">&ensp;密码</i>
+									<input type="password"placeholder="请输入密码" name="password">
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-primary" type="submit">登录</button>
+							<button class="btn btn-primary"data-dismiss="modal">去注册</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--图片-->
+		<div class="img">
+			<img src="img/banner.png"/>
+		</div>
+		<!--内容-->
+		<div class="content container page_left">
+			<!-- <article>
+				<div class="art_content" id="art_content"> -->
+					<!--美食行-->
+					<div class="cate">
+						<div class="left  col-lg-5">
+							<h1><a href="firstFood.html" data-lang = "cuisines">美食行</a></h1>
+							<p data-lang = "season">当季推荐</p>
+							<ul>
+								<li><a href="#" data-lang="one">1.温暖火锅伴你度过寒冬</a></li>
+								<li><a href="#" data-lang="two">2.避暑好去处，十大南方美食推荐</a></li>
+								<li><a href="#" data-lang="three">3.寒冬去海边吃海鲜</a></li>
+							</ul>
+						</div>
+						<!--轮播2-->
+						<div class="carousel slide hidden-lg hidden-md col-sm-12 col-xs-12" id="myCard" data-ride = "carousel">
+							<!--轮播项目-->
+							<div class="carousel-inner">
+								<div class="active item">
+									<img src="img/wrap0.jpg"/>
+								</div>
+								<div class="item">
+									<img src="img/wrap1.jpg"/>
+								</div>
+							</div>
+						</div>
+						<div class="right">
+							<div class = "caroursel poster-main hidden-sm hidden-xs col-lg-6" data-setting = '{
+								"width":800,
+								"height":470,
+								"posterWidth":540,
+								"posterHeight":470,
+								"scale":0.8,
+								"dealy":"3000",
+								"algin":"middle"
+							}'>
+								<ul class = "poster-list">
+									<li class = "poster-item"><img src="img/cate1.png" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/cate2.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/cate3.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/cate4.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/cate5.jpg" width = "60%" height="90%"></li>
+								</ul>
+								<div class = "poster-btn poster-prev-btn"></div>
+								<div class = "poster-btn poster-next-btn"></div>
+							</div>
+						</div>
+					</div>
+					<!--自由行-->
+					<div class="freedom">
+						<div class="left">
+							<div class = "caroursel poster-main hidden-sm hidden-xs" data-setting = '{
+									"width":800,
+									"height":470,
+									"posterWidth":540,
+									"posterHeight":470,
+									"scale":0.8,
+									"dealy":"3000",
+									"algin":"middle"
+								}'>
+								<ul class = "poster-list">
+									<li class = "poster-item"><img src="img/free1.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/free2.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/free3.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/free4.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/free5.jpg" width = "60%" height="90%"></li>
+								</ul>
+								<div class = "poster-btn poster-prev-btn"></div>
+								<div class = "poster-btn poster-next-btn"></div>
+							</div>
+						</div>
+						<div class="right">
+							<h1><a href="independent.html" data-lang = "free">自由行</a></h1>
+							<p data-lang = "season">当季推荐</p>
+							<ul>
+								<li><a href="#" data-lang="one">1.温暖火锅伴你度过寒冬</a></li>
+								<li><a href="#" data-lang="two">2.避暑好去处，十大南方美食推荐</a></li>
+								<li><a href="#" data-lang="three">3.寒冬去海边吃海鲜</a></li>
+							</ul>
+						</div>
+						<!--轮播2-->
+						<div class="carousel slide hidden-lg hidden-md col-sm-12 col-xs-12" id="myCard" data-ride = "carousel">
+							<!--轮播项目-->
+							<div class="carousel-inner">
+								<div class="active item">
+									<img src="img/wrap2.jpg"/>
+								</div>
+								<div class="item">
+									<img src="img/wrap3.jpg"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--高端定制-->
+					<div class="custom">
+						<div class="left">
+							<h1><a href="customizationOne.html" data-lang = "need">高端定制</a></h1>
+							<p data-lang = "season">当季推荐</p>
+							<ul>
+								<li><a href="#" data-lang="Personal">私人订制</a></li>
+								<li><a href="#" data-lang="Honeymoon">蜜月定制</a></li>
+								<li><a href="#" data-lang="Parent-child">亲子定制</a></li>
+							</ul>
+						</div>
+						<!--轮播2-->
+						<div class="carousel slide hidden-lg hidden-md col-sm-12 col-xs-12" id="myCard" data-ride = "carousel">
+							<!--轮播项目-->
+							<div class="carousel-inner">
+								<div class="active item">
+									<img src="img/wrap2.jpg"/>
+								</div>
+								<div class="item">
+									<img src="img/wrap3.jpg"/>
+								</div>
+							</div>
+						</div>
+						<div class="right">
+							<div class = "caroursel poster-main hidden-sm hidden-xs" data-setting = '{
+									"width":800,
+									"height":470,
+									"posterWidth":540,
+									"posterHeight":470,
+									"scale":0.8,
+									"dealy":"3000",
+									"algin":"middle"
+								}'>
+								<ul class = "poster-list">
+									<li class = "poster-item"><img src="img/cate1.png" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/cate2.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/cate3.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/cate4.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/cate5.jpg" width = "60%" height="90%"></li>
+								</ul>
+								<div class = "poster-btn poster-prev-btn"></div>
+								<div class = "poster-btn poster-next-btn"></div>
+							</div>
+						</div>
+					</div>
+					<!--深度游-->
+					<div class="depth">
+						<div class="left">
+							<div class = "caroursel poster-main hidden-sm hidden-xs" data-setting = '{
+									"width":800,
+									"height":470,
+									"posterWidth":540,
+									"posterHeight":470,
+									"scale":0.8,
+									"dealy":"3000",
+									"algin":"middle"
+								}'>
+								<ul class = "poster-list">
+									<li class = "poster-item"><img src="img/free1.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/free2.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/free3.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/free4.jpg" width = "60%" height="90%"></li>
+									<li class = "poster-item"><img src="img/free5.jpg" width = "60%" height="90%"></li>
+								</ul>
+								<div class = "poster-btn poster-prev-btn"></div>
+								<div class = "poster-btn poster-next-btn"></div>
+							</div>
+						</div>
+						<div class="right">
+							<h1><a href="depth.html" data-lang = "depth">深度游</a></h1>
+							<p data-lang = "season">当季推荐</p>
+							<ul>
+								<li><a href="#" data-lang="one">1.温暖火锅伴你度过寒冬</a></li>
+								<li><a href="#" data-lang="two">2.避暑好去处，十大南方美食推荐</a></li>
+								<li><a href="#" data-lang="three">3.寒冬去海边吃海鲜</a></li>
+							</ul>
+						</div>
+						<!--轮播2-->
+						<div class="carousel slide hidden-lg hidden-md col-sm-12 col-xs-12" id="myCard" data-ride = "carousel">
+							<!--轮播项目-->
+							<div class="carousel-inner">
+								<div class="active item">
+									<img src="img/wrap2.jpg"/>
+								</div>
+								<div class="item">
+									<img src="img/wrap3.jpg"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--当地拼团-->
+					<div class="local">
+						<div class="left">
+							<h1><a href="local.html" data-lang = "local">当地拼团</a></h1>
+							<p data-lang = "season">当季推荐</p>
+							<ul>
+								<li><a href="#" data-lang="one">1.温暖火锅伴你度过寒冬</a></li>
+								<li><a href="#" data-lang="two">2.避暑好去处，十大南方美食推荐</a></li>
+								<li><a href="#" data-lang="three">3.寒冬去海边吃海鲜</a></li>
+							</ul>
+						</div>
+						<div class="right">
+							<img src="img/local.png"/>
+						</div>
+					</div>
+					<!--攻略-->
+					<div class="stategy">
+						<div class="top">
+							<h1><a href="strategy.html" data-lang = "stragety">攻略<span>TOP3</span></a></h1>
+							<p data-lang = "season">当季推荐</p>
+							<h5 data-lang="life">生活的方法和指南，人在予取予求的境况下如何自处的一种策略<br />沿途的资料和地图</h5>
+						</div>
+						<div class="bottom">
+							<img src="img/stategy1.png"/>
+							<img src="img/stategy2.png"/>
+							<img src="img/stategy3.png"/>
+						</div>
+					</div>
+				</div>
+			<!-- </article>
+		</div> -->
+		<!-- <div class="page_right">
+			<div id="Catalog_box">
+			</div>
+		</div> -->
+		<!-- <script type="text/javascript" src="js/CateNav.js"></script>
+		<script type="text/javascript">
+			$(function(){	
+				$.CateNav('#art_content','#Catalog_box');//第一个参数为存放文章内容的box,第二个参数为存放生成目录的box	
+			})
+		</script> -->
+		<!--底部-->
+		<footer>
+			<div class="leads">
+				<h4 data-lang="ones">中国领先的美食旅行服务平台</h4>
+				<ul>
+					<li data-lang="twos">覆盖全球200多个国家和地区</li>
+					<li data-lang="threes"><span>100,000,000</span>位旅行者</li>
+					<li data-lang="four"><span>920,000</span>家国际酒店</li>
+					<li data-lang="five"><span>21,000,000</span>条真实点评</li>
+					<li data-lang="six"><span>302,000,000</span>次攻略下载</li>
+					<li data-lang="seven"><span>中国旅游业第一部美食主题旅行</span></li>
+				</ul>
+			</div>
+			<div class="our">
+				<h4 data-lang="eight">关于我们</h4>
+				<ul>
+					<li data-lang="nine">关于味蕾行</li>
+					<li data-lang="ten">网络信息侵权通知指引</li>
+					<li data-lang="yi">隐私政策 服务协议</li>
+					<li data-lang="er">联系我们</li>
+					<li data-lang="san">网站地图</li>
+					<li data-lang="si"><span>加入味蕾行</span></li>
+				</ul>
+			</div>
+			<div class="serve">
+				<h4 data-lang="wu">旅行服务</h4>
+				<ul>
+					<li data-lang="liu">旅游攻略</li>
+					<li data-lang="qi">旅游特价</li>
+					<li data-lang="ba">旅游问答</li>
+					<li data-lang="jiu">旅游指南</li>
+					<li data-lang="shi">旅游资讯</li>
+					<li><span data-lang="in">全球供应商入驻</span></li>
+				</ul>
+			</div>
+			<div class="watch">
+				<h4 data-lang="watch">微信公众号</h4>
+				<img src="img/watch.jpg" title="微信公众号">
+			</div>
+			<div class="watch">
+				<h4 data-lang="out">官方小程序</h4>
+				<img src="img/watch.jpg" title="官方小程序">
+			</div>
+			<div class="watch app">
+				<h4 data-lang="app">APP下载</h4>
+				<img src="img/watch.jpg" title="APP下载">
+			</div>
+		</footer>
+		<div class="foot">
+			<p data-lang="copy">Copyright 2017 bastone.com All Rights Reserved　版权所有·味蕾行　鄂ICP备00000000号-1</p>
+			<div class="language">
+				<c>语言切换:</c>
+				<input type="button" id="zh" value="中文">/
+				<input type="button" id="en" value="英文">
+			</div>
+			<p data-lang="jing">营业执照 新出网证（京）字242号 全国统一客服电话：<span>022-4562-246</span></p>
+			<img src="img/foot2.png"/>
+		</div>
+	</body>
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="js/jquery.carousel.js"></script>
+	<script>
+		Caroursel.init($('.caroursel'))
+	</script>
+</html>
+
