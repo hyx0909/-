@@ -1,0 +1,335 @@
+/* 云 */
+#navBar
+{
+	position: relative;
+}
+.navs span 
+{
+	position: absolute;
+	top: 5px;
+	left: 860px;
+	width: 83px;
+	height: 42px;
+	background: url(../img/cloud.png) no-repeat;
+}
+/*body
+{
+	overflow: hidden;
+}*/
+/*轮播图*/
+.carousel-indicators li
+{
+	border-radius: 0;
+}
+.carousel-indicators .active
+{
+	border: 1px solid #07D79D;
+}
+/*内容*/
+/*深度游*/
+.content
+{
+	text-align: center;
+	overflow: hidden;
+}
+.content h5
+{
+	margin-bottom: 30px;
+}
+.content h5 d
+{
+	padding-bottom: 20px;
+	border-bottom: 2px solid #07D79D;
+}
+.content .list
+{
+	width: 33.333333%;
+	float: left;
+	padding-bottom: 20px;
+	transition: all .8s;
+	height: 80%;
+	
+}
+.content .list .mask img
+{
+	width: 40% !important;
+	margin: 160px 0 20px 0;
+	/* background-color: #07D79D; */
+}
+.content .list h3
+{
+	color: white;
+	font-weight: bold;
+}
+.content .list p
+{
+	z-index: 100;
+	/* color: #555555; */
+}
+.content .list:hover
+{
+	/* background-color: white; */
+	box-shadow: 4px -2px 15px -5px #ccc;
+	/* transform: scale(1.1); */
+}
+.project-trigger
+{
+	cursor: pointer;
+}
+/*内容轮播*/
+.poster-main
+{
+	position: relative;
+	margin:3% 0 3% 18%;
+}
+.poster-main a,
+.poster-main img
+{
+	display:block;
+}
+.poster-main .poster-list .poster-item
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.poster-item img
+{
+	box-shadow: 5px 9px 15px -5px #3C3C3C;
+}
+.poster-main .poster-btn
+{
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    width:90px !important;
+    height:470px !important;
+    text-align: center;
+    line-height: 14px;
+    color: #07D79D;
+    z-index: 10;
+}
+.poster-main .poster-prev-btn
+{
+    left: 0;
+}
+.poster-main .poster-next-btn
+{
+    right:-90px;
+}
+/*图片*/
+.img
+{
+	width: 100%;
+}
+.img img
+{
+	width: 100%;
+}
+/*攻略*/
+.stategy
+{
+	margin: 15px 0;
+	text-align: center;
+}
+.stategy input
+{
+	width: 20%;
+	border-radius: 15px;
+	border: 1px solid #ccc;
+	padding: 3px 20px;
+	position: relative;
+}
+.stategy i img
+{
+	width: 20px;
+}
+.stategy i
+{
+	position: absolute;
+	right: 580px;
+}
+/*游记*/
+.tour
+{
+	margin-bottom: 5%;
+	overflow: hidden;
+}
+.tour .ul
+{
+	margin-left: 6%;
+	overflow: hidden;
+}
+.tour .ul .li
+{
+	float: left;
+	width: 42%;
+	margin:12px 30px;
+	position: relative;
+	transition: all 2s;
+}
+.tour .ul .li>img
+{
+	width: 107%;
+	height: 80%;
+}
+.tour .one
+{
+	background-color: rgba(255,255,255,.9);
+	width: 150px;
+	overflow: hidden;
+	padding: 30px;
+	position: absolute;
+	top: 10%;
+	right:10%;
+}
+.tour .one h1,
+.tour .one h5
+{
+	writing-mode: vertical-lr;
+}
+.tour .one h1
+{
+	display: inline;
+	font-size: 50px;
+	width: 60px;
+}
+.tour .one h5
+{
+	color: #5E5E5E;
+	float: right;
+}
+.tour .one span
+{
+	float: right;
+	border: 1px solid #07D79D;
+	padding:2px 5px;
+	border-radius:10px;
+	font-size: 10px
+}
+.tour .ul .li:hover .two
+{
+	display: block;
+}
+.tour .ul .li:hover .one
+{
+	display: none;
+}
+.tour .ul .li:hover .bigOne img
+{
+	animation: box .5s;
+	animation-fill-mode: forwards;
+}
+.tours
+{
+	overflow: hidden;
+}
+/*边框*/
+.bigOne img
+{
+	position: absolute;
+	width: 177px;
+	height: 250px;
+	top: 6%;
+	right:7%;
+	z-index: 99;
+}
+.three img
+{
+	height: 295px;
+}
+@keyframes box{
+	0%{
+		width: 220px;
+		height: 240px;
+		right:5%;
+	}
+	100%{
+		width: 540px;
+		height: 368px;
+		right:0%;
+	}
+}
+/*two*/
+.two
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	color: white;
+	background-color: rgba(0,0,0,.5);
+	width: 107%;
+	height: 100%;
+	padding-top: 150px;
+	border: 1px solid white;
+	display: none;
+}
+.two h1
+{
+	width: 35%;
+	border: 1px solid white;
+	border-radius: 25px;
+	padding: 3px 10px;
+	margin-bottom: 20px;
+	margin: 0 auto;
+}
+/* 底部 */
+footer
+{
+	width: 100%;
+	background: white;
+	display: flex;
+	justify-content: space-between;
+	padding: 3% 10% 0 10%;
+	border-bottom: 1px solid #C0C0C0;
+}
+footer img
+{
+	width: 100px;
+}
+footer h4
+{
+	font-weight: bold;
+	margin-bottom: 10%;
+}
+footer span
+{
+	color: #07D79D;
+}
+.our h4
+{
+	margin-bottom: 16%;
+}
+.serve h4
+{
+	margin-bottom: 27%;
+}
+.foot
+{
+	background: white;
+	padding: 1% 10% 0 10%;
+	overflow: hidden;
+}
+.foot img
+{
+	float: right;
+	margin-top: -30px;
+}
+.foot span
+{
+	color: #07D79D;
+}
+@media only screen and (max-width:800px) {
+	footer,
+	.foot
+	{
+		padding: 3% 5% 0 5%;
+	}
+	footer .our,
+	footer .serve,
+	footer .app
+	{
+		display: none;
+	}
+}

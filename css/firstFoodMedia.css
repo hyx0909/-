@@ -1,0 +1,77 @@
+@media only screen and (max-width: 990px) {
+	header ul
+	{
+		display: none;
+	}
+	.bigBanner
+	{
+		height: 236px;
+	}
+	.banner
+	{
+		background: transparent;
+	}
+	.cuisines ul li
+	{
+		width: 25%;
+		margin: 4px 0;
+	}
+	.zong
+	{
+		margin: 4px 0;
+	}
+	.last
+	{
+		margin-top: -419px;
+	}
+	.alleyway .left
+	{
+		width: 100%;
+	}
+	.alleyway .left span
+	{
+		background-color: transparent;
+	}
+	.zong:hover
+	{
+		border: none;
+	}
+	footer,
+	.foot
+	{
+		padding: 3% 5% 0 5%;
+	}
+	footer .our,
+	footer .serve,
+	footer .app
+	{
+		display: none;
+	}
+	.loading
+	{
+		display: none;
+	}
+}
+@media only screen and (max-width: 660px) {
+	.regional .word
+	{
+		width: 50%;
+		margin-left: 144px;
+	}
+	.regional img
+	{
+		width: 50%;
+	}
+	.zong:hover
+	{
+		border: none;
+	}
+	.regional .last
+	{
+		margin-top: 300px;
+	}
+	#cloud
+	{
+		display: none;
+	}
+}
